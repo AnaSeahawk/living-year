@@ -5,13 +5,13 @@ moon: 24º Capricorn
 moon-phase: Waxing crescent
 type: reference
 status: draft
-visibility: private
+visibility: public
 claim_tier: anumana
 ---
 
 # Notation
 
-**Working decisions awaiting Ana's confirmation.** Settled 2026-11-14 in a session where some messages were typed by Ana's husband. These rules are the backbone of the Living Year, so none is final until Ana confirms it.
+**Working decisions awaiting Ana's confirmation.** Worked out on 2026-11-14 by Ana and her husband, who develops the system with her. These rules are the backbone of the Living Year, so none is final until Ana confirms it.
 
 ## The example
 

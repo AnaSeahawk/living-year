@@ -5,7 +5,7 @@ moon: 24º Capricorn
 moon-phase: Waxing crescent
 type: reference
 status: draft
-visibility: private
+visibility: public
 claim_tier: anumana
 ---
 

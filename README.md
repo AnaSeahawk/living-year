@@ -5,13 +5,13 @@ moon: 24º Capricorn
 moon-phase: Waxing crescent
 type: reference
 status: draft
-visibility: private
+visibility: public
 claim_tier: anumana
 ---
 
 # The Living Year
 
-**Status: draft, private. Notation rules are working decisions awaiting Ana's confirmation.**
+**Status: draft. Notation rules are working decisions awaiting Ana's confirmation.**
 
 The Living Year is a membership by Ana Seahawk, with a companion journal, The Solar Journal. Both are organised by the Sun's 360º year and the Moon's cycle instead of the Gregorian calendar.
 
@@ -19,7 +19,7 @@ The Living Year is a membership by Ana Seahawk, with a companion journal, The So
 
 - The membership opens whole when the Sun enters Aries, March 2027. No other deadline, no promises before then. See [decisions.md](decisions.md).
 - A first workshop handout, "The Solar Journal: A First Notebook" (working title), exists as a draft. See [notebook/first-notebook.md](notebook/first-notebook.md).
-- A set of notation rules was settled in a working session. Some messages in that session came from Ana's husband, who works on the system with her, so every rule is recorded as awaiting Ana's confirmation. See [notation.md](notation.md).
+- A set of notation rules was worked out on 2026-11-14 by Ana and her husband, who develops the system with her. Each rule is recorded as awaiting Ana's final confirmation. See [notation.md](notation.md).
 - Nothing exists yet for membership price, tiers, speakers or salon dates.
 
 The worked example throughout is Ana's own birth chart, used at her request.
