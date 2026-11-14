@@ -1,0 +1,480 @@
+<title>Solar Journal First Notebook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+/* Layout: a desk with A5-proportioned sheets laid out as spreads; one column on a phone.
+   Single look by choice: the journal is a parchment object, so the page keeps that in any theme. */
+:root {
+  color-scheme: light;
+  --desk: #ded5c5;
+  --parchment: #f5f0e8;
+  --white: #faf8f4;
+  --faint: #f0ebe2;
+  --field: #e8dfd3;
+  --rule: #d4c9b8;
+  --gold: #c4a97d;
+  --ink: #7a6039;
+  --dark: #3d3428;
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --caps: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+body {
+  background: var(--desk);
+  color: var(--dark);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding-block: 2rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 62rem; margin: 0 auto; display: grid; gap: 2rem; }
+.note {
+  max-width: 44rem; margin: 0 auto; width: 100%;
+  border-left: 2px solid var(--ink); padding: 0.2rem 0 0.2rem 1rem; color: var(--dark);
+}
+.note h1 { font-family: var(--display); font-weight: 500; font-size: 1.7rem; line-height: 1.15; margin: 0 0 0.4rem; text-wrap: balance; }
+.note p { margin: 0.4rem 0 0; max-width: 62ch; }
+.sheets { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); gap: 1.5rem; }
+.sheet {
+  background: var(--parchment);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 var(--white) inset, 0 10px 24px -18px var(--dark);
+  padding: 2rem 1.7rem 1.4rem;
+  display: flex; flex-direction: column; gap: 0.9rem;
+  min-width: 0;
+}
+.folio { margin-top: auto; padding-top: 0.8rem; text-align: center; font-family: var(--caps); letter-spacing: 0.14em; font-size: 0.8rem; color: var(--ink); }
+.kicker { font-family: var(--caps); letter-spacing: 0.16em; font-size: 0.82rem; color: var(--ink); margin: 0; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 1.75rem; line-height: 1.1; margin: 0; text-wrap: balance; }
+.hair { border: 0; border-top: 1px solid var(--gold); margin: 0.1rem 0; width: 3.5rem; }
+p { margin: 0; }
+/* The ordinal mark: a small circle resting on a short bar, always in the sans face so it never passes for the cardinal degree sign. */
+.o { font-size: 0; }
+.o::before {
+  content: "o"; font-family: var(--sans); font-style: normal; font-weight: 400;
+  font-size: 0.62rem; line-height: 1; display: inline-block; vertical-align: 0.42rem;
+  border-bottom: 1.5px solid currentColor; padding-bottom: 1px; margin-left: 1px;
+}
+h2 .o::before { font-size: 0.9rem; vertical-align: 0.75rem; border-bottom-width: 2px; }
+.f .val .o::before { vertical-align: 0.5rem; }
+.g { font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "Noto Sans Symbols", "Apple Symbols", "DejaVu Sans", serif; font-style: normal; }
+
+/* cover */
+.cover { justify-content: center; text-align: center; align-items: center; gap: 1.1rem; min-height: 30rem; background: var(--white); }
+.cover .title { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1.05; margin: 0; }
+.cover .sub { font-family: var(--caps); letter-spacing: 0.2em; color: var(--ink); font-size: 0.95rem; }
+.cover .line { font-family: var(--display); font-style: italic; font-size: 1.15rem; max-width: 22ch; }
+.cover svg { width: 9.5rem; height: 9.5rem; }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.5rem; counter-increment: s; }
+.steps li::before { content: counter(s); font-family: var(--display); font-size: 1.25rem; line-height: 1.2; color: var(--ink); }
+.steps b { font-weight: 500; }
+.steps span { display: block; color: var(--dark); }
+.aside { background: var(--faint); border: 1px solid var(--rule); padding: 0.7rem 0.85rem; font-size: 0.88rem; }
+
+/* entry form */
+.entry { display: grid; gap: 0.55rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 1rem; }
+.row.three { grid-template-columns: repeat(3, 1fr); }
+.f { display: grid; gap: 0.1rem; min-width: 0; }
+.f label, .f .lab { font-family: var(--caps); letter-spacing: 0.12em; font-size: 0.78rem; color: var(--ink); }
+.f input, .f .val {
+  font-family: var(--display); font-style: italic; font-size: 1.2rem; line-height: 1.3;
+  color: var(--dark); background: transparent; border: 0; border-bottom: 1px solid var(--ink);
+  border-radius: 0; padding: 0.1rem 0; width: 100%; min-width: 0; min-height: 1.9rem;
+}
+.f input:focus-visible, .lines textarea:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.f.small label, .f.small .lab { font-size: 0.72rem; }
+.f.small input, .f.small .val { font-size: 1rem; min-height: 1.6rem; }
+.lines textarea, .lines .written {
+  width: 100%; border: 0; resize: vertical; min-height: 11.4rem;
+  font-family: var(--display); font-style: italic; font-size: 1.2rem; line-height: 1.9rem; color: var(--dark);
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.9rem - 1px), var(--rule) calc(1.9rem - 1px), var(--rule) 1.9rem);
+  padding: 0; display: block;
+}
+.lines .written { min-height: 0; background: none; padding-block: 0.3rem; }
+.work { font-size: 0.86rem; color: var(--dark); display: grid; gap: 0.15rem; font-variant-numeric: tabular-nums; }
+.work b { font-weight: 500; }
+
+/* figures */
+.fig { margin: 0; display: grid; gap: 0.45rem; }
+.fig svg { width: 100%; height: auto; display: block; }
+.fig text { font-family: var(--sans); fill: var(--dark); }
+.fig .gl { font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "Noto Sans Symbols", "Apple Symbols", "DejaVu Sans", serif; }
+.fig .ln { stroke: var(--dark); fill: none; stroke-width: 1; }
+.fig .soft { stroke: var(--rule); fill: none; stroke-width: 1; }
+.fig .gold { stroke: var(--ink); fill: none; stroke-width: 2; }
+.fig .cell { fill: var(--white); stroke: var(--dark); stroke-width: 1; }
+.fig .on { fill: var(--field); stroke: var(--dark); stroke-width: 1; }
+.fig .dot { fill: var(--dark); }
+.fig .disc { fill: var(--white); stroke: var(--dark); stroke-width: 1.2; }
+.fig .lab { font-family: var(--caps); letter-spacing: 0.08em; fill: var(--ink); }
+.fig figcaption { font-size: 0.88rem; }
+.fig figcaption b { font-weight: 500; }
+
+/* keys */
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+th { font-family: var(--caps); letter-spacing: 0.1em; font-weight: 500; color: var(--ink); text-align: left; font-size: 0.78rem; padding: 0 0.4rem 0.25rem 0; }
+td { padding: 0.18rem 0.4rem 0.18rem 0; border-top: 1px solid var(--rule); }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; }
+.phases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem 0.4rem; text-align: center; font-size: 0.78rem; }
+.phases svg { width: 2.1rem; height: 2.1rem; display: block; margin: 0 auto 0.2rem; }
+.phases b { display: block; font-weight: 500; }
+h3 { font-family: var(--caps); letter-spacing: 0.14em; font-weight: 500; font-size: 0.9rem; color: var(--ink); margin: 0.3rem 0 0; }
+@media (max-width: 26rem) {
+  .sheet { padding: 1.5rem 1.1rem 1.1rem; }
+  .row.three { grid-template-columns: 1fr 1fr; }
+  .cover { min-height: 24rem; }
+}
+</style>
+
+<div class="wrap">
+  <div class="note">
+    <h1>A first notebook for the Living Year workshop</h1>
+    <p>A draft to look at. Eight small pages: a cover, how an entry begins, one entry filled in as an example, that example drawn, two blank entries, and the keys. The blank pages can be typed into here. In print each page would be A5, like the journal.</p>
+    <p>The example is a birth entry, taken from a chart for 2 November 1974. The blank birth page that follows it is for the reader's own.</p>
+  </div>
+
+  <div class="sheets">
+    <!-- cover -->
+    <section class="sheet cover" aria-label="Cover">
+      <span class="sub">The Living Year</span>
+      <svg viewBox="0 0 200 200" role="img" aria-label="The year as a circle of twelve signs, beginning at Aries">
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#3d3428" stroke-width="1"/>
+        <circle cx="100" cy="100" r="66" fill="none" stroke="#c4a97d" stroke-width="1"/>
+        <g id="ticks" stroke="#3d3428" stroke-width="1"></g>
+        <line x1="12" y1="100" x2="188" y2="100" stroke="#c4a97d" stroke-width="1"/>
+        <line x1="100" y1="12" x2="100" y2="188" stroke="#c4a97d" stroke-width="1"/>
+        <circle cx="100" cy="100" r="9" fill="none" stroke="#3d3428" stroke-width="1"/>
+        <circle cx="100" cy="100" r="1.6" fill="#3d3428"/>
+      </svg>
+      <p class="title">The Solar Journal</p>
+      <span class="sub">A First Notebook</span>
+      <p class="line">The calendar names it. The sky locates it.</p>
+    </section>
+
+    <!-- how -->
+    <section class="sheet" aria-label="How an entry begins">
+      <p class="kicker">Page one</p>
+      <h2>How an entry begins</h2>
+      <hr class="hair">
+      <p>Write when there is something to record. Each entry opens by saying where it was written: in the year, under the Moon, and on the Earth.</p>
+      <ol class="steps">
+        <li><span><b>The Sun.</b> Its sign and degree. This is the date. The year begins at 1º <span class="g">♈︎</span>.</span></li>
+        <li><span><b>The Moon.</b> Its sign and degree, then its phase.</span></li>
+        <li><span><b>The year.</b> Anno Mundi, the common year, or both.</span></li>
+        <li><span><b>The place.</b> Latitude and longitude. Written once, and again after a move.</span></li>
+        <li><span><b>Solar time.</b> Sunrise, noon and sunset for that place, looked up. Solar noon and clock noon are rarely the same moment.</span></li>
+        <li><span><b>The quarter.</b> Spring, Summer, Autumn or Winter.</span></li>
+        <li><span><b>Train time.</b> The calendar date, small, for meeting the world.</span></li>
+      </ol>
+      <p>Then write. A line is an entry. A page is an entry.</p>
+      <div class="aside"><b style="font-weight:500">From a chart to the journal.</b> Charts and almanacs measure from zero: 9°52′ <span class="g">♏︎</span>. The journal counts the way a calendar does, first, second, third. Leave the minutes and add one: 9°52′ is in the 10th degree, written 10º <span class="g">♏︎</span>. A chart's 0° is the journal's 1º.</div>
+      <p class="folio">1</p>
+    </section>
+
+    <!-- example -->
+    <section class="sheet" aria-label="An example entry">
+      <p class="kicker">Page two · An example · A birth</p>
+      <h2>5868 · 10º <span class="g">♏︎</span></h2>
+      <hr class="hair">
+      <div class="entry">
+        <div class="row">
+          <div class="f"><span class="lab">Sun</span><span class="val">10º <span class="g">♏︎</span></span></div>
+          <div class="f"><span class="lab">Moon</span><span class="val">13º <span class="g">♊︎</span> · full</span></div>
+        </div>
+        <div class="row">
+          <div class="f"><span class="lab">Year</span><span class="val">5868 · 1974</span></div>
+          <div class="f"><span class="lab">Quarter</span><span class="val">Autumn</span></div>
+        </div>
+        <div class="row">
+          <div class="f"><span class="lab">Place</span><span class="val">52°27′ N · 109°10′ W</span></div>
+          <div class="f small"><span class="lab">Train time</span><span class="val">2 November · 10:34 am</span></div>
+        </div>
+        <div class="row three">
+          <div class="f small"><span class="lab">Sunrise</span><span class="val">8:14</span></div>
+          <div class="f small"><span class="lab">Solar noon</span><span class="val">1:00</span></div>
+          <div class="f small"><span class="lab">Sunset</span><span class="val">5:46</span></div>
+        </div>
+      </div>
+      <div class="lines"><div class="written">Born on a prairie morning under a full Moon. That day the Sun stood highest a whole hour after the clock said noon.</div></div>
+      <div class="work">
+        <h3>From the chart</h3>
+        <span>Sun 9°52′ <span class="g">♏︎</span> becomes <b>10º <span class="g">♏︎</span></b></span>
+        <span>Moon 12°32′ <span class="g">♊︎</span> becomes <b>13º <span class="g">♊︎</span></b></span>
+        <h3>Finding the phase</h3>
+        <span>Sun: <span class="g">♎︎</span> ends at 210º, and 10 more: <b>220º</b></span>
+        <span>Moon: <span class="g">♉︎</span> ends at 60º, and 13 more: <b>73º</b></span>
+        <span>Moon − Sun: 73 − 220 falls below zero, so add 360: <b>213º</b>, which is full.</span>
+        <h3>Or around the circle</h3>
+        <span>Count the signs from the Sun on to the Moon. From 10º <span class="g">♏︎</span> to 10º <span class="g">♊︎</span> is seven signs: <b>210º</b></span>
+        <span>The Moon is at 13º, three further: <b>213º</b>, full.</span>
+      </div>
+      <p class="folio">2</p>
+    </section>
+
+    <!-- drawn 1 -->
+    <section class="sheet" aria-label="The example, drawn: the degree and the place in the year">
+      <p class="kicker">Page three · The example, drawn</p>
+      <h3>From the chart to the journal</h3>
+      <figure class="fig">
+        <svg viewBox="0 0 320 96" role="img" aria-label="A ruler of Scorpio. The chart's 9 degrees 52 minutes falls inside the tenth degree.">
+          <rect class="cell" x="20" y="30" width="56" height="30"/><rect class="cell" x="76" y="30" width="56" height="30"/>
+          <rect class="on" x="132" y="30" width="56" height="30"/>
+          <rect class="cell" x="188" y="30" width="56" height="30"/><rect class="cell" x="244" y="30" width="56" height="30"/>
+          <g font-size="11" text-anchor="middle">
+            <text x="48" y="49">8th</text><text x="104" y="49">9th</text><text x="160" y="49" font-weight="500">10th</text><text x="216" y="49">11th</text><text x="272" y="49">12th</text>
+          </g>
+          <g font-size="10" text-anchor="middle" class="lab">
+            <text class="lab" x="20" y="76">7°</text><text class="lab" x="76" y="76">8°</text><text class="lab" x="132" y="76">9°</text><text class="lab" x="188" y="76">10°</text><text class="lab" x="244" y="76">11°</text><text class="lab" x="300" y="76">12°</text>
+          </g>
+          <line class="gold" x1="180.5" y1="14" x2="180.5" y2="60"/>
+          <circle class="dot" cx="180.5" cy="14" r="3"/>
+          <text x="174" y="17" font-size="11" text-anchor="end">Sun 9°52′</text>
+          <text x="20" y="92" font-size="9.5" class="lab">the chart measures the lines · the journal counts the spaces</text>
+        </svg>
+        <figcaption>The chart's 9°52′ <span class="g">♏︎</span> lies past the 9° line, inside the tenth space. The journal names the space: <b>10º <span class="g">♏︎</span></b>.</figcaption>
+      </figure>
+      <h3>The place in the year</h3>
+      <figure class="fig">
+        <svg viewBox="0 0 320 104" role="img" aria-label="The year as a strip of twelve signs. Libra ends at 210 degrees and ten more reaches 220.">
+          <g id="strip"></g>
+          <path class="ln" d="M12 22 V14 H186.6 V22"/>
+          <text x="99" y="10" font-size="10.5" text-anchor="middle">seven signs · 210º</text>
+          <line class="gold" x1="195" y1="26" x2="195" y2="62"/>
+          <circle class="dot" cx="195" cy="66" r="3"/>
+          <text x="195" y="82" font-size="11" text-anchor="middle" font-weight="500">220º</text>
+          <text x="204" y="10" font-size="10.5">and 10 more</text>
+          <text class="lab" x="12" y="98" font-size="9.5">1º</text>
+          <text class="lab" x="308" y="98" font-size="9.5" text-anchor="end">360º</text>
+        </svg>
+        <figcaption>Seven signs lie before <span class="g">♏︎</span>, and <span class="g">♎︎</span> ends at 210º. Ten more is the <b>220th degree</b> of the year.</figcaption>
+      </figure>
+      <p class="folio">3</p>
+    </section>
+
+    <!-- drawn 2 -->
+    <section class="sheet" aria-label="The example, drawn: the phase of the Moon">
+      <p class="kicker">Page four · The example, drawn</p>
+      <h3>From the Sun on to the Moon</h3>
+      <figure class="fig">
+        <svg id="wheel" viewBox="0 0 320 320" role="img" aria-label="Two zodiacs, one inside the other. The outer is the sky, with the Sun at the 10th of Scorpio and the Moon at the 13th of Gemini. The inner begins at the Sun. The Moon falls three degrees into the inner Scorpio: 213 degrees from the Sun."></svg>
+        <figcaption>The outer ring is the sky: the Sun at 10º <span class="g">♏︎</span>, the Moon at 13º <span class="g">♊︎</span>. The inner ring is the same zodiac begun again at the Sun, where every lunation starts. The Moon stands in its Scorpio, three degrees in: <b>3º <span class="g">♏︎</span> of the lunation.</b></figcaption>
+      </figure>
+      <div class="aside">The same by numbers: Moon 73º, Sun 220º. 73 − 220 falls below zero, so add 360: 213º.</div>
+      <p style="font-size:0.9rem">A new Moon is 1º <span class="g">♈︎</span> of the lunation. By the eight phases, 213º is a full Moon.</p>
+      <p class="folio">4</p>
+    </section>
+
+    <!-- blank 1 -->
+    <section class="sheet" aria-label="First blank entry">
+      <p class="kicker">Page five · A first entry</p>
+      <div class="entry">
+        <div class="row">
+          <div class="f"><label for="a-sun">Sun</label><input id="a-sun" type="text" autocomplete="off"></div>
+          <div class="f"><label for="a-moon">Moon</label><input id="a-moon" type="text" autocomplete="off"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="a-year">Year</label><input id="a-year" type="text" autocomplete="off"></div>
+          <div class="f"><label for="a-quarter">Quarter</label><input id="a-quarter" type="text" autocomplete="off"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="a-place">Place</label><input id="a-place" type="text" autocomplete="off"></div>
+          <div class="f small"><label for="a-train">Train time</label><input id="a-train" type="text" autocomplete="off"></div>
+        </div>
+        <div class="row three">
+          <div class="f small"><label for="a-rise">Sunrise</label><input id="a-rise" type="text" autocomplete="off"></div>
+          <div class="f small"><label for="a-noon">Solar noon</label><input id="a-noon" type="text" autocomplete="off"></div>
+          <div class="f small"><label for="a-set">Sunset</label><input id="a-set" type="text" autocomplete="off"></div>
+        </div>
+      </div>
+      <div class="lines"><label class="kicker" for="a-text" style="display:block;margin-bottom:0.3rem">Entry</label><textarea id="a-text" rows="6"></textarea></div>
+      <p class="folio">5</p>
+    </section>
+
+    <!-- blank 2: birth -->
+    <section class="sheet" aria-label="Birth and a second entry">
+      <p class="kicker">Page six · Where the year began for you</p>
+      <div class="entry">
+        <div class="row">
+          <div class="f"><label for="b-sun">Birth degree</label><input id="b-sun" type="text" autocomplete="off"></div>
+          <div class="f"><label for="b-moon">Birth Moon</label><input id="b-moon" type="text" autocomplete="off"></div>
+        </div>
+      </div>
+      <p>Each year the Sun returns to the degree it held at birth. That return is a personal new year, and a good day for an entry.</p>
+      <hr class="hair">
+      <p class="kicker">A second entry</p>
+      <div class="entry">
+        <div class="row">
+          <div class="f"><label for="c-sun">Sun</label><input id="c-sun" type="text" autocomplete="off"></div>
+          <div class="f"><label for="c-moon">Moon</label><input id="c-moon" type="text" autocomplete="off"></div>
+        </div>
+        <div class="row three">
+          <div class="f small"><label for="c-rise">Sunrise</label><input id="c-rise" type="text" autocomplete="off"></div>
+          <div class="f small"><label for="c-noon">Solar noon</label><input id="c-noon" type="text" autocomplete="off"></div>
+          <div class="f small"><label for="c-set">Sunset</label><input id="c-set" type="text" autocomplete="off"></div>
+        </div>
+      </div>
+      <div class="lines"><label class="kicker" for="c-text" style="display:block;margin-bottom:0.3rem">Entry</label><textarea id="c-text" rows="4" style="min-height:7.6rem"></textarea></div>
+      <p class="folio">6</p>
+    </section>
+
+    <!-- keys -->
+    <section class="sheet" aria-label="The keys">
+      <p class="kicker">Page seven · The keys</p>
+      <h3>The signs</h3>
+      <div class="cols">
+        <table><tbody>
+          <tr><td><span class="g">♈︎</span> Aries</td><td>1º–30º</td></tr>
+          <tr><td><span class="g">♉︎</span> Taurus</td><td>31º–60º</td></tr>
+          <tr><td><span class="g">♊︎</span> Gemini</td><td>61º–90º</td></tr>
+          <tr><td><span class="g">♋︎</span> Cancer</td><td>91º–120º</td></tr>
+          <tr><td><span class="g">♌︎</span> Leo</td><td>121º–150º</td></tr>
+          <tr><td><span class="g">♍︎</span> Virgo</td><td>151º–180º</td></tr>
+        </tbody></table>
+        <table><tbody>
+          <tr><td><span class="g">♎︎</span> Libra</td><td>181º–210º</td></tr>
+          <tr><td><span class="g">♏︎</span> Scorpio</td><td>211º–240º</td></tr>
+          <tr><td><span class="g">♐︎</span> Sagittarius</td><td>241º–270º</td></tr>
+          <tr><td><span class="g">♑︎</span> Capricorn</td><td>271º–300º</td></tr>
+          <tr><td><span class="g">♒︎</span> Aquarius</td><td>301º–330º</td></tr>
+          <tr><td><span class="g">♓︎</span> Pisces</td><td>331º–360º</td></tr>
+        </tbody></table>
+      </div>
+      <p style="font-size:0.86rem">One sign is 30º, and the twelve make 360º. To place a day in the whole year, take where the sign before it ends and add the degree: 10º <span class="g">♏︎</span> is 210 and 10, the 220th degree. Moon minus Sun gives the phase. Below zero, add 360. Or count the signs around the circle from the Sun on to the Moon, 30º for each.</p>
+      <h3>The eight phases</h3>
+      <div class="phases" id="phases"></div>
+      <h3>The four quarters</h3>
+      <table><tbody>
+        <tr><td>Spring</td><td>1º–90º</td><td>albedo</td></tr>
+        <tr><td>Summer</td><td>91º–180º</td><td>citrinitas</td></tr>
+        <tr><td>Autumn</td><td>181º–270º</td><td>rubedo</td></tr>
+        <tr><td>Winter</td><td>271º–360º</td><td>nigredo</td></tr>
+      </tbody></table>
+      <p class="folio">7</p>
+    </section>
+  </div>
+</div>
+
+<script>
+(function () {
+  // cover ticks: 12 long, 360/10 short
+  var g = document.getElementById('ticks'), ns = 'http://www.w3.org/2000/svg';
+  for (var i = 0; i < 72; i++) {
+    var a = i * 5 * Math.PI / 180, long = i % 6 === 0;
+    var r1 = long ? 66 : 82, r2 = 88, l = document.createElementNS(ns, 'line');
+    l.setAttribute('x1', 100 + r1 * Math.cos(a)); l.setAttribute('y1', 100 - r1 * Math.sin(a));
+    l.setAttribute('x2', 100 + r2 * Math.cos(a)); l.setAttribute('y2', 100 - r2 * Math.sin(a));
+    g.appendChild(l);
+  }
+  // moon phases: lit side on the right while waxing
+  var names = [['New','1º–45º'],['Crescent','46º–90º'],['First quarter','91º–135º'],['Gibbous','136º–180º'],['Full','181º–225º'],['Disseminating','226º–270º'],['Last quarter','271º–315º'],['Balsamic','316º–360º']];
+  var mids = [8, 68, 112, 150, 188, 232, 292, 338], box = document.getElementById('phases');
+  names.forEach(function (n, i) {
+    var ph = mids[i] * Math.PI / 180, R = 16, k = Math.cos(ph);       // k: 1 new, -1 full
+    var waxing = mids[i] < 180, rx = Math.abs(k) * R;
+    // lit region: half disc on the lit side, plus or minus the terminator ellipse
+    var s1 = waxing ? 1 : 0, s2 = (k > 0) === waxing ? 0 : 1;
+    var d = 'M20 4 A16 16 0 0 ' + s1 + ' 20 36 A' + rx.toFixed(2) + ' 16 0 0 ' + s2 + ' 20 4 Z';
+    var el = document.createElement('div');
+    el.innerHTML = '<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#3d3428"/><path d="' + d + '" fill="#faf8f4"/><circle cx="20" cy="20" r="16" fill="none" stroke="#3d3428" stroke-width="1"/></svg><b>' + n[0] + '</b>' + n[1];
+    box.appendChild(el);
+  });
+  // year strip: twelve signs, 1º to 360º
+  var SIGNS = ['\u2648','\u2649','\u264A','\u264B','\u264C','\u264D','\u264E','\u264F','\u2650','\u2651','\u2652','\u2653'];
+  function el(name, attrs, text) {
+    var e = document.createElementNS(ns, name);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  var strip = document.getElementById('strip'), W = 296 / 12;
+  SIGNS.forEach(function (gl, i) {
+    strip.appendChild(el('rect', { 'class': i === 7 ? 'on' : 'cell', x: 12 + i * W, y: 26, width: W, height: 36 }));
+    strip.appendChild(el('text', { 'class': 'gl', x: 12 + i * W + W / 2, y: 49, 'font-size': 13, 'text-anchor': 'middle' }, gl + '\uFE0E'));
+  });
+  // wheel: Aries begins at the left and the signs run counter-clockwise, as on a chart
+  var wheel = document.getElementById('wheel'), C = 160;
+  function pt(lon, r) { var a = (180 + lon) * Math.PI / 180; return [C + r * Math.cos(a), C - r * Math.sin(a)]; }
+  wheel.appendChild(el('circle', { 'class': 'ln', cx: C, cy: C, r: 150 }));
+  wheel.appendChild(el('circle', { 'class': 'ln', cx: C, cy: C, r: 120 }));
+  SIGNS.forEach(function (gl, i) {
+    var a = pt(i * 30, 120), b = pt(i * 30, 150), m = pt(i * 30 + 15, 135);
+    wheel.appendChild(el('line', { 'class': 'ln', x1: a[0], y1: a[1], x2: b[0], y2: b[1] }));
+    wheel.appendChild(el('text', { 'class': 'gl', x: m[0], y: m[1] + 5, 'font-size': 15, 'text-anchor': 'middle' }, gl + '\uFE0E'));
+  });
+  var SUN = 219.87, MOON = 72.55, ARC = 212.68, RI = 76, RO = 102, RM = 111;
+  function sector(a0, a1, r0, r1) {
+    var p = [], t, q;
+    for (t = a0; t <= a1 + 0.01; t += 2) { q = pt(t, r1); p.push(q[0].toFixed(1) + ' ' + q[1].toFixed(1)); }
+    for (t = a1; t >= a0 - 0.01; t -= 2) { q = pt(t, r0); p.push(q[0].toFixed(1) + ' ' + q[1].toFixed(1)); }
+    return 'M' + p.join('L') + 'Z';
+  }
+  // inner zodiac: the same twelve signs, begun again at the Sun
+  wheel.appendChild(el('path', { 'class': 'on', d: sector(SUN + 210, SUN + 240, RI, RO) }));
+  wheel.appendChild(el('circle', { 'class': 'ln', cx: C, cy: C, r: RI }));
+  wheel.appendChild(el('circle', { 'class': 'ln', cx: C, cy: C, r: RO }));
+  SIGNS.forEach(function (gl, i) {
+    var a = pt(SUN + i * 30, RI), b = pt(SUN + i * 30, RO), m = pt(SUN + i * 30 + 15, (RI + RO) / 2);
+    wheel.appendChild(el('line', { 'class': 'ln', x1: a[0], y1: a[1], x2: b[0], y2: b[1] }));
+    wheel.appendChild(el('text', { 'class': 'gl', x: m[0], y: m[1] + 4.5, 'font-size': 13, 'text-anchor': 'middle' }, gl + '\uFE0E'));
+  });
+  // the walk from the Sun on to the Moon, in the gap between the two zodiacs
+  var d = '';
+  for (var t = 0; t <= ARC; t += 2) { var q = pt(SUN + t, RM); d += (t ? 'L' : 'M') + q[0].toFixed(1) + ' ' + q[1].toFixed(1); }
+  var end = pt(MOON, RM); d += 'L' + end[0].toFixed(1) + ' ' + end[1].toFixed(1);
+  wheel.appendChild(el('path', { 'class': 'gold', d: d }));
+  var sp = pt(SUN, RM), s0 = pt(SUN, RI), s2 = pt(SUN, 120), m0 = pt(MOON, RI), m2 = pt(MOON, 120);
+  wheel.appendChild(el('line', { 'class': 'gold', x1: s0[0], y1: s0[1], x2: s2[0], y2: s2[1] }));
+  wheel.appendChild(el('line', { 'class': 'ln', x1: m0[0], y1: m0[1], x2: m2[0], y2: m2[1] }));
+  wheel.appendChild(el('circle', { 'class': 'disc', cx: sp[0], cy: sp[1], r: 7 }));
+  wheel.appendChild(el('circle', { 'class': 'dot', cx: sp[0], cy: sp[1], r: 1.8 }));
+  wheel.appendChild(el('circle', { 'class': 'disc', cx: end[0], cy: end[1], r: 7 }));
+  wheel.appendChild(el('text', { 'class': 'lab', x: C, y: C - 30, 'font-size': 10, 'text-anchor': 'middle' }, 'SUN TO MOON'));
+  wheel.appendChild(el('text', { x: C, y: C - 6, 'font-size': 22, 'text-anchor': 'middle', 'font-weight': 500 }, '213\u00ba'));
+  wheel.appendChild(el('text', { x: C, y: C + 14, 'font-size': 12, 'text-anchor': 'middle' }, 'seven signs and 3'));
+  var ct = el('text', { x: C, y: C + 36, 'font-size': 15, 'text-anchor': 'middle', 'font-weight': 500 }, '3\u00ba ');
+  var cg = el('tspan', { 'class': 'gl' }, '\u264F\uFE0E'); ct.appendChild(cg);
+  wheel.appendChild(ct);
+
+  // set every ordinal mark in the sans face
+  var w = document.createTreeWalker(document.querySelector('.wrap'), NodeFilter.SHOW_TEXT), nodes = [], n;
+  while ((n = w.nextNode())) if (n.nodeValue.indexOf('\u00ba') > -1) nodes.push(n);
+  nodes.forEach(function (t) {
+    if (t.parentNode.closest && t.parentNode.closest('svg')) {
+      // inside a drawing: a raised, underlined o, then drop back to the baseline
+      var bits = t.nodeValue.split('\u00ba'), fr = document.createDocumentFragment();
+      bits.forEach(function (b, i) {
+        if (b || i === 0) {
+          var ts = document.createElementNS(ns, 'tspan'); ts.textContent = b;
+          if (i > 0) ts.setAttribute('dy', '0.28em');
+          fr.appendChild(ts);
+        }
+        if (i < bits.length - 1) {
+          var o = document.createElementNS(ns, 'tspan'); o.textContent = 'o';
+          o.setAttribute('dy', '-0.45em'); o.setAttribute('font-size', '0.62em'); o.setAttribute('text-decoration', 'underline');
+          fr.appendChild(o);
+        }
+      });
+      t.parentNode.replaceChild(fr, t);
+      return;
+    }
+    var parts = t.nodeValue.split('\u00ba'), frag = document.createDocumentFragment();
+    parts.forEach(function (p, i) {
+      frag.appendChild(document.createTextNode(p));
+      if (i < parts.length - 1) { var sp = document.createElement('span'); sp.className = 'o'; sp.textContent = '\u00ba'; frag.appendChild(sp); }
+    });
+    t.parentNode.replaceChild(frag, t);
+  });
+  // remember what is typed, per viewer
+  var fields = document.querySelectorAll('input[id], textarea[id]');
+  fields.forEach(function (f) {
+    try { var v = localStorage.getItem('fn-' + f.id); if (v !== null) f.value = v; } catch (e) {}
+    f.addEventListener('input', function () { try { localStorage.setItem('fn-' + f.id, f.value); } catch (e) {} });
+  });
+})();
+</script>
