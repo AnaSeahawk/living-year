@@ -27,7 +27,8 @@ Made by Ana, 2026-11-14.
 Made by Ana, 2026-11-16.
 
 - There are three ways to enter: the whole solar year, one season, or one lunation.
-- The year and the seasons begin at the Sun's four gates: its entry into Aries, Cancer, Libra and Capricorn. A lunation begins at the new moon.
+- A season begins at one of the Sun's four gates: its entry into Aries, Cancer, Libra or Capricorn. A lunation begins at the new moon.
+- A yearly membership is a solar return, kept like an anniversary. It begins on whatever day a person joins and ends when the Sun returns to the position it held that day.
 - Each lunation holds one salon and one journal session. Each season's gate has a special gathering. There is room for surprises and seasonal experiments.
 - The written material, the experiments included, is open for anyone to read. It is not held back for members. The value of the membership is the conversation behind the material, in direct contact with Ana.
 
@@ -40,7 +41,7 @@ From the Sun's entry into Aries on 20 March 2027 to its next entry on 20 March 2
 | Autumn | 23 September 2027 | 30 September, 29 October, 28 November |
 | Winter | 22 December 2027 | 27 December, 26 January 2028, 25 February 2028 |
 
-Still open: prices, whether a yearly membership can begin at any gate, and where in the lunation each gathering sits.
+Still open: prices, and where in the lunation each gathering sits.
 
 ## Not adopted
 
