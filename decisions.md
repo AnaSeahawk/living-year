@@ -22,6 +22,26 @@ Made by Ana, 2026-11-14.
 - No membership price, tiers or speaker plan exists yet.
 - The public line so far: "a companion journal and a way to take part by the lunar cycle, the solar quarter or the full solar cycle."
 
+## Ways to enter and the rhythm
+
+Made by Ana, 2026-11-16.
+
+- There are three ways to enter: the whole solar year, one season, or one lunation.
+- The year and the seasons begin at the Sun's four gates: its entry into Aries, Cancer, Libra and Capricorn. A lunation begins at the new moon.
+- Each lunation holds one salon and one journal session. Each season's gate has a special gathering. There is room for surprises and seasonal experiments.
+- The written material, the experiments included, is open for anyone to read. It is not held back for members. The value of the membership is the conversation behind the material, in direct contact with Ana.
+
+From the Sun's entry into Aries on 20 March 2027 to its next entry on 20 March 2028, three new moons fall inside each season (Universal Time, Swiss Ephemeris):
+
+| Season | Gate | New moons |
+|---|---|---|
+| Spring | 20 March 2027 | 6 April, 6 May, 4 June |
+| Summer | 21 June 2027 | 4 July, 2 August, 31 August |
+| Autumn | 23 September 2027 | 30 September, 29 October, 28 November |
+| Winter | 22 December 2027 | 27 December, 26 January 2028, 25 February 2028 |
+
+Still open: prices, whether a yearly membership can begin at any gate, and where in the lunation each gathering sits.
+
 ## Not adopted
 
 The planning booklet for anaseahawk.com suggested founding salons, one in each of the four lunations before the Sun enters Aries, sold by the seat. This was not adopted. Open salons in winter 2026–27 remain a possibility only.
