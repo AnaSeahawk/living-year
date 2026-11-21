@@ -16,7 +16,7 @@ claim_tier: anumana
 Made by Ana, 2026-11-19 to 2026-11-21. Where this section differs from the older ones below, this section holds.
 
 - **Circles.** Every group gathering is a Circle. The words salon, hearth, workshop and anything work-flavoured are retired. Even when Ana presents, every voice counts, and the meeting between the people in the room is the point. Some Circles are free and some are paid; each listing says which, its cost and its seats.
-- **Conversations.** Anything one to one is a conversation, booked on Cal.com: 20 minutes (US$25), 60 minutes (US$60) or 90 minutes (US$90). Any Circle can be taken alone as a 90-minute conversation. Place Readings and Nomadic Living are conversations only.
+- **Conversations.** Anything one to one is a conversation, booked on Cal.com: 20 minutes (US$45), 60 minutes (US$125) or 90 minutes (US$180), rates from 2026-11-21. Any Circle can be taken alone as a 90-minute conversation. Place Readings and Nomadic Living are conversations only.
 - **By the seat first.** No membership at the start. Circles are booked one seat at a time on Cal.com, seats capped by Ana. Membership by the year, season or lunation is parked, not dropped.
 - **When.** The big opening is the Sun's entry into Aries, 20 March 2027, or the week before it. Something may be ready sooner, and it can go up when it is. Every Circle is announced at least one week ahead.
 - **The Women's Shivambu Circle** (with Fiona Gardner and Megan Macdonald, through Mother Spirit) appears on the Living Year calendar with a link to circle.mother-spirit.com, wherever its dates fall. First date: Friday 11 December 2026.
@@ -88,7 +88,7 @@ Now Keeping the Year; see *The shape now*.
 
 | Format | Length | How it is arranged |
 |---|---|---|
-| One to one | 90 minutes, no discussion period added | Booked online: the 90-minute session, US$90, at cal.com/anaseahawk/90minutes |
+| One to one | 90 minutes, no discussion period added | Booked online: the 90-minute session, US$180 from 2026-11-21, at cal.com/anaseahawk/90minutes |
 | Group | Two hours: 90 minutes plus half an hour of group discussion | Arranged with Ana directly |
 
 ## Where the notation stands
