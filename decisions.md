@@ -11,9 +11,42 @@ claim_tier: anumana
 
 # Decisions about The Living Year
 
+## The shape now
+
+Made by Ana, 2026-11-19 to 2026-11-21. Where this section differs from the older ones below, this section holds.
+
+- **Circles.** Every group gathering is a Circle. The words salon, hearth, workshop and anything work-flavoured are retired. Even when Ana presents, every voice counts, and the meeting between the people in the room is the point. Some Circles are free and some are paid; each listing says which, its cost and its seats.
+- **Conversations.** Anything one to one is a conversation, booked on Cal.com: 20 minutes (US$25), 60 minutes (US$60) or 90 minutes (US$90). Any Circle can be taken alone as a 90-minute conversation. Place Readings and Nomadic Living are conversations only.
+- **By the seat first.** No membership at the start. Circles are booked one seat at a time on Cal.com, seats capped by Ana. Membership by the year, season or lunation is parked, not dropped.
+- **When.** The big opening is the Sun's entry into Aries, 20 March 2027, or the week before it. Something may be ready sooner, and it can go up when it is. Every Circle is announced at least one week ahead.
+- **The Women's Shivambu Circle** (with Fiona Gardner and Megan Macdonald, through Mother Spirit) appears on the Living Year calendar with a link to circle.mother-spirit.com, wherever its dates fall. First date: Friday 11 December 2026.
+- **The guide, not a journal.** The companion is "The Living Year: A Soli Lunar Guide", given free for an email. After it comes a short letter at each new moon: new writing, observations, and the Circles ahead.
+- **Keeping the Year.** "Journal Like the Alchemists" becomes Keeping the Year: the Circle that opens each season, keeping a notebook by the Sun's year and the Moon's cycles, with the guide in hand.
+- **Circle names.** Each name sits with its plain subject beside it:
+
+| Circle | Subject | First placed in |
+|---|---|---|
+| Keeping the Year | dating a notebook by the sky | every season's opening |
+| First Waters | beginning Shivambu | spring |
+| Soil Makers | urbaculture: bokashi, the Phoenix Fly, humanure | spring |
+| The Peel Jar | eco enzymes | summer |
+| Edges and Play | somatic awareness, movement | summer |
+| The Living Waters | distillation and the women of alchemy | autumn |
+| Reading the Waters | Shivambu, the deeper work | autumn |
+| The Winter Shelf | a reading Circle | winter |
+| The Year Gathered | the year's observations | winter |
+
+  The placements are a first sketch; each season's dates are set as it nears.
+
+- **On the website.** anaseahawk.com is arranged as three doors: Gather (The Living Year), Read (Writing) and Talk (Conversations). The menu reads The Living Year · Writing · Conversations · About. The Map page is retired.
+
+Still open: prices and seats for each Circle; whether Kit sends the guide by itself once it is finished.
+
 Made by Ana, 2026-11-14.
 
 ## The membership
+
+Superseded in part by *The shape now*: no membership at the start, and salons are now Circles.
 
 - It opens whole when the Sun enters Aries, March 2027. There is no other deadline and no promises before then. Something may go up early only if it is ready.
 - It is open to anyone interested.
@@ -48,6 +81,8 @@ Still open: prices, and where in the lunation each gathering sits.
 The planning booklet for anaseahawk.com suggested founding salons, one in each of the four lunations before the Sun enters Aries, sold by the seat. This was not adopted. Open salons in winter 2026–27 remain a possibility only.
 
 ## The workshop
+
+Now Keeping the Year; see *The shape now*.
 
 "The Living Year: Journal Like the Alchemists" is complete on its own. It is also a way to feel what the membership would be like. The draft outline is in [workshop/journal-like-the-alchemists.md](workshop/journal-like-the-alchemists.md).
 
