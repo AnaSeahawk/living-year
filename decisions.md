@@ -31,7 +31,7 @@ Made by Ana, 2026-11-19 to 2026-11-21. Where this section differs from the older
 | Soil Makers | urbaculture: bokashi, the Phoenix Fly, humanure | spring |
 | The Peel Jar | eco enzymes | summer |
 | Edges and Play | somatic awareness, movement | summer |
-| The Living Waters | distillation and the women of alchemy | autumn |
+| The Living Waters | distillation and the women of alchemy | spring: the first Circle of the year (moved from autumn, 2026-11-24) |
 | Reading the Waters | Shivambu, the deeper work | autumn |
 | The Winter Shelf | a reading Circle | winter |
 | The Year Gathered | the year's observations | winter |
@@ -39,6 +39,11 @@ Made by Ana, 2026-11-19 to 2026-11-21. Where this section differs from the older
   The placements are a first sketch; each season's dates are set as it nears.
 
 - **On the website.** anaseahawk.com is arranged as three doors: Gather (The Living Year), Read (Writing) and Talk (Conversations). The menu reads The Living Year · Writing · Conversations · About. The Map page is retired.
+
+**2026-11-24, from Ana:**
+- **Circles & Conversations.** The Conversations page and menu item are renamed *Circles & Conversations* (address unchanged: /conversations/). Circles lead the page, then conversations one to one. The home door's verb becomes *Meet*. Menu: The Living Year · Writing · Circles & Conversations · About.
+- **Before spring: the guide.** The Soli Lunar Guide is what is offered before spring.
+- **The Living Waters opens the year** in spring. Two hours: 90 minutes for the story in pictures (it may run shorter), then 30 minutes of open conversation. It has its own page with the June 2026 plates. The talk is entirely Ana's creation; no other name is attached to it. Its earlier private marking was only while it was being built.
 
 Still open: prices and seats for each Circle; whether Kit sends the guide by itself once it is finished.
 
